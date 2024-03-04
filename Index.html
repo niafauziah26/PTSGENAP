@@ -29,13 +29,13 @@
 
  <img src="loader.mp4" style="width: 1,8em; display: block" id="loader">
 
-<a href="form-pembeli.html">Tambah Pembeli</a>
+<a href="form-pembeli.html">Tambah Data Pembeli</a>
   
   <script type="module">
     import { ambilDataPembeli, formatAngka} from './main.js'
     
    $(document).ready(async function() {
-     let elemenData = $("#data-pembelj > tbody");
+     let elemenData = $("#data-pembeli > tbody");
      let dataPembeli = await ambilDataPembeli();
      let nomor = 1;
      

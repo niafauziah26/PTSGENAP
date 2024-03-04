@@ -51,7 +51,7 @@ export async function tambahDataPembeli(nama, alamat, notlpon) {
     const dokref = await addDoc(collection(db, 'pembeli'), {
   nama: nama,
   alamat: alamat,
-  notlpkn: notlpon  
+  notlpon: notlpon  
     });
     console.log('Berhasil menambah pembeli' + dokref.id);
   } catch (e) { 
