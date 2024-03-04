@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <h1>Data Data Pembeli</h1>
+  <h1>Form Data Pembeli</h1>
   
-  <table class="table" id="daftar-produk">
+  <table class="table" id="data-pembeli">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -29,23 +29,23 @@
 
  <img src="loader.mp4" style="width: 1,8em; display: block" id="loader">
 
-<a href="form-produk.html">Tambah Pembeli</a>
+<a href="form-pembeli.html">Tambah Pembeli</a>
   
   <script type="module">
-    import { ambilDaftarProduk, formatAngka} from './main.js'
+    import { ambilDataPembeli, formatAngka} from './main.js'
     
    $(document).ready(async function() {
      let elemenDaftar = $("#daftar-produk > tbody");
      let daftarProduk = await ambilDaftarProduk();
      let nomor = 1;
      
-     daftarProduk.forEach((data) => { 
-       elemenDaftar.append(
+     dataPembeli.forEach((data) => { 
+       elemenData.append(
          '<tr>' +
          '<th>' + nomor + '</th>' +
          '<td>' + data.nama + '</td>' +
-         '<td>' + formatAngka(data.harga) + '</td>' +
-         '<td>' + data.stok + '</td>' +
+         '<td>' + formatAngka(data.alamat) + '</td>' +
+         '<td>' + data.notlpon + '</td>' +
          '</tr>'
          );
          nomor = nomor + 1;
