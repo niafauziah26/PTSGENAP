@@ -35,8 +35,8 @@
     import { ambilDataPembeli, formatAngka} from './main.js'
     
    $(document).ready(async function() {
-     let elemenDaftar = $("#daftar-produk > tbody");
-     let daftarProduk = await ambilDaftarProduk();
+     let elemenData = $("#data-pembelj > tbody");
+     let dataPembeli = await ambilDataPembeli();
      let nomor = 1;
      
      dataPembeli.forEach((data) => { 
